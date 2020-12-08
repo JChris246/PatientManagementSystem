@@ -1,0 +1,19 @@
+PHP edits
+- fix up the pdf for discharge form (idk if this need much more fixing ... now it just lacking info)
+- certain fields really need proper validation (think i done with this)
+
+HTML edits
+- add sidebar to all pages
+- all pages need to enhanced for responsive design
+- redesign 'add patient'
+- also redesign 'edit patient'
+
+PHP + HTML edits
+
+
+ISSUES
+- possible that extra whitespace between user role or user first and last name can cause a login error 
+	(test and fix - might have to manually implement strip) (probably ignore this issue tbh)
+- System flaw, deleting a medicalpersonnel could leave an orphaned patient note (patient will ref a personnel id that does not exist idgaf about atm, but had to note it for memory if we decide to run this project further)
+- concurrent editing for notes implemented but not tested
+- reloading the page after adding a note can make a addition of a duplicate note

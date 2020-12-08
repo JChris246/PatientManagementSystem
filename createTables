@@ -1,0 +1,59 @@
+CREATE TABLE `Note`
+(
+ `NoteID`     varchar(5) NOT NULL ,
+ `NationalID` varchar(10) NOT NULL ,
+ `Note`       varchar(150) NOT NULL ,
+ `EntryTime`  datetime NOT NULL ,
+ `LastEdit`   datetime NOT NULL ,
+
+PRIMARY KEY (`NoteID`, `NationalID`),
+KEY `fkIdx_79` (`NationalID`),
+CONSTRAINT `FK_79` FOREIGN KEY `fkIdx_79` (`NationalID`) REFERENCES `Patient` (`NationalID`)
+);
+
+CREATE TABLE `PatientHistory`
+(
+ `HistoryID`  varchar(5) NOT NULL ,
+ `NationalID` varchar(10) NOT NULL ,
+ `Issue`      varchar(150) NOT NULL ,
+
+PRIMARY KEY (`HistoryID`, `NationalID`),
+KEY `fkIdx_59` (`NationalID`),
+CONSTRAINT `FK_59` FOREIGN KEY `fkIdx_59` (`NationalID`) REFERENCES `Patient` (`NationalID`)
+);
+
+
+CREATE TABLE `FamilyHistory`
+(
+ `FamilyID`   varchar(5) NOT NULL ,
+ `NationalID` varchar(10) NOT NULL ,
+ `Issue`      varchar(150) NOT NULL ,
+
+PRIMARY KEY (`FamilyID`, `NationalID`),
+KEY `fkIdx_62` (`NationalID`),
+CONSTRAINT `FK_62` FOREIGN KEY `fkIdx_62` (`NationalID`) REFERENCES `Patient` (`NationalID`)
+);
+
+CREATE TABLE `MedicalPersonnel`
+(
+ `PersonnelID` int unsigned NOT NULL AUTO_INCREMENT ,
+ `Role`        varchar(6) NOT NULL ,
+ `FirstName`   varchar(25) NOT NULL ,
+ `LastName`    varchar(25) NOT NULL ,
+
+PRIMARY KEY (`PersonnelID`)
+);
+
+
+CREATE TABLE `AssignedOfficial`
+(
+ `NationalID`  varchar(10) NOT NULL ,
+ `PersonnelID` int unsigned NOT NULL ,
+
+PRIMARY KEY (`NationalID`, `PersonnelID`),
+KEY `fkIdx_51` (`NationalID`),
+CONSTRAINT `FK_51` FOREIGN KEY `fkIdx_51` (`NationalID`) REFERENCES `Patient` (`NationalID`),
+KEY `fkIdx_57` (`PersonnelID`),
+CONSTRAINT `FK_57` FOREIGN KEY `fkIdx_57` (`PersonnelID`) REFERENCES `MedicalPersonnel` (`PersonnelID`)
+);
+

@@ -1,0 +1,159 @@
+button.submit, button.search, button.delete {
+	border: none;
+	padding: 10px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: #54b7ff;
+    color: white;
+}
+
+button.delete {
+    background-color:#d74726;
+}
+
+button.search {
+    padding: 5px 25px;
+}
+
+button.toggle {
+	border: none;
+	padding: 5px 10px;
+	text-align: left;
+	text-decoration: none;
+	display: block;
+    font-size: 24px;
+    margin-bottom: -36px;
+    color: white;
+    float: right;
+    background-color: inherit;
+}
+
+div.menu_item, button.menu_item, div.menu_item_active {
+    border: none;
+    padding: 10px;
+	text-decoration: none;
+	display: block;
+    font-size: 15px;
+    width: 100%;
+    color: white;
+    background-color: inherit;
+    text-align: left;
+}
+
+button.submit:hover, button.panel:hover, button.tab:hover, button.menu_item:hover, 
+button.active, button.search:hover, div.menu_item:hover, div.menu_item_active {
+    background-color: #0093fe;
+    color: white; 
+    font-weight: bold;
+}
+
+button.delete:hover {
+    background-color:#d83009;
+    font-weight: bold;
+}
+
+button.panel {
+    border: none;
+	padding: 45px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    width: 242px;
+    background-color:  #54b7ff;
+    color: white;
+}
+
+button.tab {
+    border: none;
+    padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+    font-size: 16px;
+    min-width: 9%;
+    color: white;
+}
+
+button.inactive_tab {
+    background-color:  #40afff;
+}
+
+button.active_tab {
+    background-color: #0093fe;
+}
+
+/*this is technically a button*/
+div.hamburger {
+    width: 25px;
+    height: 4px;
+    margin: 4px 0;
+    border-radius: 6px;
+}
+
+div.dashrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#first_panel {
+    margin-top: 75px;
+}
+
+#bottom_panel {
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1100px) {
+    div.dashrow {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    button.panel {
+        padding: 40px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 552px) { 
+    button.panel {
+        padding: 24px 16px;
+        font-size: 12px;
+        margin-bottom: 6px;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    div.hamburger {
+        width: 18px;
+        height: 3.5px;
+        margin: 2.5px 0;
+        border-radius: 6px;
+    }
+}
+
+@media only screen and (max-width: 410px) { 
+    button.panel {
+        padding: 24px 16px;
+        font-size: 14px;
+        margin-bottom: 6px;
+        margin-right: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,280 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 2px;
+}
+
+#index {
+    line-height: 1.4;
+    position: relative;
+    background-size: cover;
+}
+
+body.heartBg::after, #index::after {
+    content: "";
+    z-index: -1;
+    background-image: url('../imgs/bg-04_alt.jpg');
+    opacity: 0.55;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-attachment: fixed;
+}
+
+/*span#user, span#role {
+    display: block;
+    float: none;
+    text-align: center;
+}*/
+
+#usericon {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+h1 {
+    padding-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h1::after {
+	content: " ";
+	border-radius: 6px;
+	display: block;
+	height: 3px;
+	width: 70px;
+	margin: 10px auto 10px auto;
+}
+
+h2 {
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2.balance, h1.balance {
+    padding-left: 50px;
+}
+
+tr {
+    padding-bottom: 10px;
+}
+
+textarea {
+    width: 93%; 
+    min-height: 80px;    
+}
+
+a.no_link {
+    text-decoration: none;
+}
+
+form.inline {
+    display: inline-block;
+}
+
+input:focus, textarea:focus {
+    background-color: #4bb3ff;
+    color: white;
+}
+
+input.search:focus {
+    background-color: white;
+    color: #272727;
+}
+
+div.patientActions {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 6%;
+}
+
+div.patientActions a {
+    margin: 0 4px;
+}
+
+select {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#content {
+    padding: 20px 10px; /*top + bottom, right + left*/
+    width: 70%;
+    margin: 0 auto;
+}
+
+#content2 {
+    width: 100%;
+}
+
+#table {
+    margin-left: 10px;
+}
+
+.menu_items {
+    margin-top: -15px;
+    padding-left: 10px;
+}
+
+#sidepanel {
+    height: 100%;
+    width: 0px; /* 230px width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 40px;
+    transition: 0.8s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+.center_text {
+    text-align: center;
+}
+
+.info {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.push {
+    margin-right: 40px;
+}
+
+img.icon {
+    height: 28px;
+    float: left;
+}
+
+td.attr {
+    padding: 6px 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+input.checkbox {
+    width: 2%;
+}
+
+input {
+    margin-bottom: 10px;
+    /*border: none;*/
+    padding: 5px;
+    /*width: 54%;*/
+    height: 12px;
+}
+
+.inputs {
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+.tag {
+    text-align: right;
+    padding-right: 15px;
+    display: inline-block;
+    min-width: 64px;
+}
+
+/*size of average tablet screen*/
+@media only screen and (max-width: 768px) { 
+    .tag {
+        display: inline-block;
+        padding-bottom: 4px;
+        padding-left: 2px;
+    }
+
+    input {
+        margin-bottom: 15px;
+        width: 92%;
+    }
+
+    h1 {
+        padding-bottom: 12px;
+        font-size: 24px;
+    }
+
+    button.panel{
+        min-height: 60px;
+        max-height: 60px;
+    }
+
+    div {
+        font-size: 14px;
+    }
+
+    div.patientActions {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 2%;
+    }
+    
+    div.patientActions a button {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 552px) { 
+    .tag {
+        text-align:left;
+        /*min-width: 0px;
+        display: block;*/
+        padding-bottom: 4px;
+        padding-left: 2px;
+    }
+
+    .inputs {
+        margin: 0;
+    }
+
+    h1 {
+        padding-bottom: 5px;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    div {
+        font-size: 14px;
+    }
+
+    #content {
+        width: 100%;
+        padding: 0;
+    }
+	
+	#content3 {
+		width: 95%;
+		padding: 1px;
+        margin: 0 auto;
+	}
+
+    td.attr {
+        padding: 4px 8px;
+        font-size: 14px;
+        text-align: center;
+        /*word-break:break-all;
+        word-wrap: break-word;*/
+    }
+
+    #actions {
+        padding-left: 25px;
+    }
+}
